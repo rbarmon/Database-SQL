@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="member_member_fee" directorySegmentName="seg_0" id="41CC3673-1C2C-A70C-F9A1-D84B4BDB99FE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 09:40:29 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<sourcePk>9E51A303-90A0-7330-0F60-B3D40D319D7E</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>pays</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7AB4179E-012E-FA6B-6F35-570075CD28E8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E1B37D66-7F3C-D0ED-4BC2-4DD64C733339</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

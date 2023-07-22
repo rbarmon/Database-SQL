@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="303832D2-30BE-1585-0602-699A657A32E0" name="UNIT_MAINT">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>D22CD640-4EC3-77B1-226E-2042E262DE68</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="um_id" id="6819DECC-6BF9-7EE9-FD26-D70219A6D030">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit maintenance id]]></commentInRDBMS>
+<generatorID>4D6AB6DD-9FBF-C472-02BC-DBFB56E97FF0</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="maintenance_date" id="13D7DE91-03ED-D165-E212-C20A4D1629D8">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
+<generatorID>266465E6-E0B4-A578-D485-2089BF3790B1</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="maintenance_type" id="2E93AE82-BB23-2064-B02D-E39D84F70322">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance type, added check constraint ( 'R' for Recarpet, 'T' for Repaint, 'M' for Media refit, 'W' for Whitegoods Refit and 'O' for other)
+]]></commentInRDBMS>
+<generatorID>BA70EDD4-6D05-61A5-1DD1-4BF365FB6744</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<constraintName>chk_maintenance_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="M" description="Media refit"/>
+<valueDef value="O" description="Other "/>
+<valueDef value="R" description="Recarpet"/>
+<valueDef value="T" description="Repaint"/>
+<valueDef value="W" description="Whitegoods Refit "/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="unit_no" id="595A6ACD-F428-A479-F64E-83A1016351EB">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit number]]></commentInRDBMS>
+<generatorID>9EF6572A-9CF7-2FE4-4110-FF8BD44E0A36</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E70D4426-DCD0-82D8-0B71-D878AF265CCE" referredColumn="80D7894A-BF80-CFA8-65B0-EDD7C4EE7DF1"/>
+</associations>
+</Column>
+<Column name="resort_id" id="62F7E0DD-B326-A50C-E5AB-FB77258242F8">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>97C5242F-B6C9-A537-CA5D-FA55C4BF3B17</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E70D4426-DCD0-82D8-0B71-D878AF265CCE" referredColumn="17AC80C8-DD1F-F8AA-1255-EE1D1B9AE67B"/>
+</associations>
+</Column>
+<Column name="maintenance_cost" id="0844FD0E-ED12-2832-4294-7B38AFCB1E44">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance cost]]></commentInRDBMS>
+<generatorID>CF939767-8026-B4CA-E3E1-F41263799BFC</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1482B919-98E8-8BC4-6AF9-0A5D91D7D0EE" name="UNIT_MAINT_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>B4D1B9EF-B927-55A4-F58C-6C802D50279A</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6819DECC-6BF9-7EE9-FD26-D70219A6D030"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA2404EE-B94D-C8DB-C0E2-6DC50FCCF4B1" name="UNIT_MAINT_NK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>437325AE-D468-C7C3-771A-19A019BEE44D</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D7DE91-03ED-D165-E212-C20A4D1629D8"/>
+<colUsage columnID="2E93AE82-BB23-2064-B02D-E39D84F70322"/>
+<colUsage columnID="595A6ACD-F428-A479-F64E-83A1016351EB"/>
+<colUsage columnID="62F7E0DD-B326-A50C-E5AB-FB77258242F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43406735-103D-4224-5F2B-8E00B96FA8C8" name="unit_maint_unit">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>25E3BD94-BF5A-3877-0713-2EEC4EEE02A4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="595A6ACD-F428-A479-F64E-83A1016351EB"/>
+<colUsage columnID="62F7E0DD-B326-A50C-E5AB-FB77258242F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

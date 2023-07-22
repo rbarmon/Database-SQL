@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="18CA3C99-4311-F154-DD44-6EC55E041238" containerWithKeyObject="08535A84-2CB3-B049-EC47-982D6A9249F7" localFKIndex="26B5DC00-D7A7-BA5A-4529-BE04F7917ECD" name="poi_rating_level">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>1EC72C21-930C-9E7E-D932-CD47D0D1BF23</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<referredTableLongName>RATING_LEVEL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>820A26E0-484D-31BD-7692-ABB6152ACC0D</referredTableID>
+<keyObject>C0C371AF-CDC2-4518-191E-16B3A808A631</keyObject>
+<referredKeyID>C0C371AF-CDC2-4518-191E-16B3A808A631</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>rl_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

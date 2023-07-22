@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE54B961-F32C-10F8-8131-4AD1CEACA0F4" name="RATE">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 04:05:55 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rate_season" id="C70352F6-8315-C535-DFD2-7703835FB772">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:50:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[rate holiday season (peak, off, school holidays).]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_no" id="675A2274-D68C-E00D-180B-8EE1B2F789FD">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 12:16:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit number]]></commentInRDBMS>
+<generatorID>07C4F846-120B-8EE7-22D4-E2F1B5796310</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>FD00BF74-93C2-07E3-3C6F-D4E0D27D0987</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resort_id" id="879C7130-529A-8A8B-C2EB-77E3F9A6E0BD">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 12:16:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>07C4F846-120B-8EE7-22D4-E2F1B5796310</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>A929FBC4-A6EE-0DFF-A289-E24F30050BB5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rate_cost" id="FA58C4F1-D3CD-9292-6AFE-5572CE2620A3">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:52:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[rate cost ]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B28DA837-A310-034D-8BD6-E5BA9CE6F342" name="RATE PK">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:50:57 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C70352F6-8315-C535-DFD2-7703835FB772</attributeRef>
+<attributeRef>675A2274-D68C-E00D-180B-8EE1B2F789FD</attributeRef>
+<attributeRef>879C7130-529A-8A8B-C2EB-77E3F9A6E0BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

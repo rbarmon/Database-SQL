@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="tsa_system" id="A80B78B6-68DF-1E67-8136-9CBFF6C18A61" version="3.5">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-02 15:05:11 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A80B78B6-68DF-1E67-8136-9CBFF6C18A61</designId>
+</OSDM_Design>

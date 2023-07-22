@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D22CD640-4EC3-77B1-226E-2042E262DE68" name="UNIT_MAINT">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:22:44 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="um_id" id="4D6AB6DD-9FBF-C472-02BC-DBFB56E97FF0">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 02:41:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit maintenance id]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="maintenance_date" id="266465E6-E0B4-A578-D485-2089BF3790B1">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:44:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="maintenance_type" id="BA70EDD4-6D05-61A5-1DD1-4BF365FB6744">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:44:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance type, added check constraint ( 'R' for Recarpet, 'T' for Repaint, 'M' for Media refit, 'W' for Whitegoods Refit and 'O' for other)
+]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<constraintName>chk_maintenance_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="M" description="Media refit"/>
+<valueDef value="O" description="Other "/>
+<valueDef value="R" description="Recarpet"/>
+<valueDef value="T" description="Repaint"/>
+<valueDef value="W" description="Whitegoods Refit "/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_no" id="9EF6572A-9CF7-2FE4-4110-FF8BD44E0A36">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 09:39:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit number]]></commentInRDBMS>
+<generatorID>25E3BD94-BF5A-3877-0713-2EEC4EEE02A4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>FD00BF74-93C2-07E3-3C6F-D4E0D27D0987</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resort_id" id="97C5242F-B6C9-A537-CA5D-FA55C4BF3B17">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 09:39:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>25E3BD94-BF5A-3877-0713-2EEC4EEE02A4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>A929FBC4-A6EE-0DFF-A289-E24F30050BB5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="maintenance_cost" id="CF939767-8026-B4CA-E3E1-F41263799BFC">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:44:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance cost]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B4D1B9EF-B927-55A4-F58C-6C802D50279A" name="UNIT_MAINT PK">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:44:15 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4D6AB6DD-9FBF-C472-02BC-DBFB56E97FF0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="437325AE-D468-C7C3-771A-19A019BEE44D" name="UNIT_MAINT_NK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 02:41:55 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<newElementsIDs>266465E6-E0B4-A578-D485-2089BF3790B1,BA70EDD4-6D05-61A5-1DD1-4BF365FB6744,9EF6572A-9CF7-2FE4-4110-FF8BD44E0A36,97C5242F-B6C9-A537-CA5D-FA55C4BF3B17</newElementsIDs>
+<usedAttributes>
+<attributeRef>266465E6-E0B4-A578-D485-2089BF3790B1</attributeRef>
+<attributeRef>BA70EDD4-6D05-61A5-1DD1-4BF365FB6744</attributeRef>
+<attributeRef>9EF6572A-9CF7-2FE4-4110-FF8BD44E0A36</attributeRef>
+<attributeRef>97C5242F-B6C9-A537-CA5D-FA55C4BF3B17</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

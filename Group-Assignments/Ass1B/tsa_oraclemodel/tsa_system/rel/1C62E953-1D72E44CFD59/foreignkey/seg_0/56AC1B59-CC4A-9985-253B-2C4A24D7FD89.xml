@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="56AC1B59-CC4A-9985-253B-2C4A24D7FD89" containerWithKeyObject="9C6E8214-4C22-CB0F-18CB-291CCA9EDECB" localFKIndex="E3FBFA0B-36DD-0461-A6BF-B6A2760847F8" name="review_poi">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>8C6733C6-0634-9B2B-6B18-10608811DFE9</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<referredTableLongName>POINT_OF_INTEREST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>08535A84-2CB3-B049-EC47-982D6A9249F7</referredTableID>
+<keyObject>EA20B57F-96C9-FE99-4DE3-0571F47A4512</keyObject>
+<referredKeyID>EA20B57F-96C9-FE99-4DE3-0571F47A4512</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>poi_address</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

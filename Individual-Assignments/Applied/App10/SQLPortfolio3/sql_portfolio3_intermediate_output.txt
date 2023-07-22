@@ -1,0 +1,77 @@
+SQL> 
+SQL> /*****PLEASE ENTER YOUR DETAILS BELOW*****/
+SQL> /*sql_portfolio3_intermediate.sql*/
+SQL> 
+SQL> /*Student ID: 31165176*/
+SQL> /*Student Name: Rian Barrett*/
+SQL> /*Unit Code: FIT2094*/
+SQL> /*Applied Class No: A02*/
+SQL> 
+SQL> /*1*/
+SQL> /* PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE*/
+SQL> /* ENSURE that your query is formatted and has a semicolon*/
+SQL> /* (;) at the end of this answer*/
+SQL> 
+SQL> SELECT
+  2      p.prop_no,
+  3      prop_address,
+  4      COUNT(rent_agreement_no) AS number_of_rents
+  5  FROM
+  6           rent.property p
+  7      JOIN rent.rent r
+  8      ON p.prop_no = r.prop_no
+  9  WHERE
+ 10      to_char(rent_lease_start, 'yyyy') = '2020'
+ 11      OR to_char(rent_lease_start, 'yyyy') = '2021'
+ 12  GROUP BY
+ 13      p.prop_no,
+ 14      prop_address
+ 15  HAVING
+ 16      COUNT(*) > 2
+ 17  ORDER BY
+ 18      number_of_rents DESC,
+ 19      prop_no;
+
+   PROP_NO PROP_ADDRESS                                                                     NUMBER_OF_RENTS
+---------- -------------------------------------------------------------------------------- ---------------
+      1984 30 Cox Street, Suite 036, 1100, Fadelland, Tasmania                                            3
+      2022 536 Emma Meadow, Suite 340, 9498, Woodland, Tasmania                                           3
+      2117 9167 Heller Lane, Apt. 005, 3172, Alichester, Tasmania                                         3
+      3197 22 Benjamin Track, Suite 722, 8157, Koelpinmouth, Australian Capital Territory                 3
+      5990 9454 Ebert Crest, Suite 183, 4027, Trompview, New South Wales                                  3
+
+SQL> 
+SQL> /*2*/
+SQL> /* PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE*/
+SQL> /* ENSURE that your query is formatted and has a semicolon*/
+SQL> /* (;) at the end of this answer*/
+SQL> 
+SQL> 
+SQL> SELECT
+  2      p.prop_no,
+  3      prop_address,
+  4      COUNT(maint_id)        AS number_of_maintenance,
+  5      '$' || SUM(maint_cost) AS total_maint_cost,
+  6      '$' || MAX(maint_cost) AS max_maint_cost
+  7  FROM
+  8           rent.property p
+  9      JOIN rent.maintenance m
+ 10      ON p.prop_no = m.prop_no
+ 11  WHERE
+ 12      to_char(maint_datetime, 'yyyy') = '2022'
+ 13  GROUP BY
+ 14      p.prop_no,
+ 15      prop_address
+ 16  ORDER BY
+ 17      number_of_maintenance DESC,
+ 18      prop_no;
+
+   PROP_NO PROP_ADDRESS                                                                     NUMBER_OF_MAINTENANCE TOTAL_MAINT_COST                          MAX_MAINT_COST                           
+---------- -------------------------------------------------------------------------------- --------------------- ----------------------------------------- -----------------------------------------
+      9412 284 Princes Highway, Unit 1, 6856, South Annashire, Victoria                                         3 $6275                                     $4000                                    
+      6123 26 Hackett Knoll, Apt. 615, 6856, South Annashire, Victoria                                          2 $16000                                    $11000                                   
+
+SQL> 
+SQL> 
+SQL> --Comment out SET ECHO and SPOOL commands before submitting your portfolio
+SQL> SPOOL OFF

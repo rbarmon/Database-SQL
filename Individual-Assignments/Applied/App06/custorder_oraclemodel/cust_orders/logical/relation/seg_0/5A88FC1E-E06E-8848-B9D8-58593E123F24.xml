@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ORDER_ORDERLINE" directorySegmentName="seg_0" id="5A88FC1E-E06E-8848-B9D8-58593E123F24">
+<createdBy>rb</createdBy>
+<createdTime>2022-12-08 03:57:52 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="0AC3E72D-D90F-EED1-61FE-E83C6C525351" value="true"/>
+</engineerTo>
+<sourcePk>F6A142B9-F125-C715-D2A4-E52A1857038C</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>includes</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5DCA859C-9520-9B8D-3F94-9A81343601E7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4D4C57C6-7EDB-862F-0315-70C0DD4A2D19</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

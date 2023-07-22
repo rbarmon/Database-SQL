@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD16D256-BDF9-448E-DCD4-F3AC649501D8" name="COMPANY">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>A813FB3F-58A7-CB22-F6BD-FE40E05B8ED4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="company_ABN" id="DEFE04C3-BB49-E80D-0044-2C5334F946AB">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[company Australian Business Number]]></commentInRDBMS>
+<generatorID>D0FF4103-A8A5-7C4B-6535-368301707B43</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="company_name" id="7567A83E-7070-F0B0-F53B-87D6437676D6">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[company name]]></commentInRDBMS>
+<generatorID>8F60141D-2015-A0F8-B9ED-B8700601EB1A</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="company_CEO" id="CD0ABE9A-CFEE-581C-D7B5-B43211800BC2">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[company CEO's name]]></commentInRDBMS>
+<generatorID>D1E0C5CB-E875-22DD-1CA1-46C6A3AC9F33</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="company_phone_no" id="A6426612-E72A-542D-0F37-DC1F90F2CC88">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>9A04D5BE-4BE6-8481-F5C6-8D3EB73C2B6D</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="company_address" id="70C289C5-6432-1D2D-51FF-B719C55B5858">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[company address]]></commentInRDBMS>
+<generatorID>FEB5C463-C0E8-7A97-F1F7-FA76AB159807</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B1D82B45-B026-4DDD-1A92-A6172082ADF8" name="COMPANY_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>32935C4E-3130-FBF3-8E83-0C2C0D9DE151</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEFE04C3-BB49-E80D-0044-2C5334F946AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

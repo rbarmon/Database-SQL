@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="90DF6203-69F9-8256-95E1-C1CEC03AC267" name="TOWN">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>B5AE4ABE-2C49-609C-FCB7-4E50D7AA49C6</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="town_id" id="9F7CB25C-0B68-51DA-4478-554CAA959728">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town id ]]></commentInRDBMS>
+<generatorID>F62E2590-A2A3-FE7E-4B81-0E94DBADCF14</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_lat" id="A85D59CF-7F4B-1353-2824-53F4DF02449E">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town lattitude]]></commentInRDBMS>
+<generatorID>23CFCEAF-6B61-B747-B88E-5FB758341455</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_long" id="37177944-7E5C-9007-418A-DBB4B31EFD04">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town longitude]]></commentInRDBMS>
+<generatorID>F25925E1-7888-D9E0-9F77-289738CCAAB4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_name" id="433687C8-1469-8843-4DFC-09BEB6E4601F">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town name]]></commentInRDBMS>
+<generatorID>BBCBDC3B-00FF-8BC5-53AD-0212732FD2E0</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_state" id="3F7C451B-F9F1-9BF7-5D34-FAECA144D097">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town state name]]></commentInRDBMS>
+<generatorID>A987C871-5894-1A2F-69FB-B3E38C53E498</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_s_temp" id="ABE3DF42-B862-466F-1508-7555C01F46A0">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town average summer  temperature]]></commentInRDBMS>
+<generatorID>EA0834DE-5681-D91A-C557-9CA67186D843</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_w_temp" id="1546F796-14EC-5395-8DB3-2BA428CEDFDB">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town average summer temperature]]></commentInRDBMS>
+<generatorID>B581462C-0EEC-DEA3-606F-A3D4B7E9632F</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_population" id="209EE94B-1FAE-5783-7AC4-45B14100DEB8">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town population number]]></commentInRDBMS>
+<generatorID>00F3EEFE-2D36-47CC-E9B3-4D8800343EF9</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C6DB740-7EBD-1251-78E1-3D83933C9ADB" name="TOWN_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>E6F00432-9B86-BB7F-0E58-905D7AA40B8B</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F7CB25C-0B68-51DA-4478-554CAA959728"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F864830-AFB0-DA11-0B84-A381A41A56AB" name="TOWN_NK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>5C19554A-AAA9-83CB-53AF-B17BDC610A18</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A85D59CF-7F4B-1353-2824-53F4DF02449E"/>
+<colUsage columnID="37177944-7E5C-9007-418A-DBB4B31EFD04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

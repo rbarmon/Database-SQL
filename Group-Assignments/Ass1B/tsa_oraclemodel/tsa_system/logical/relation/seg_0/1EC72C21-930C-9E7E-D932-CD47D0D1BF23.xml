@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="poi_rating_level" directorySegmentName="seg_0" id="1EC72C21-930C-9E7E-D932-CD47D0D1BF23">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 14:57:31 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<sourcePk>C1DCDC31-998E-EE92-3166-44A71D5F0E82</sourcePk>
+<targetPk>0D833945-AE8A-A888-FBE4-6473AB52F770</targetPk>
+<identifying>false</identifying>
+<nameOnSource>averages</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>676AC55D-F7CD-C889-2908-4774A460B7FB</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>AA3A0065-F519-CB63-6187-40438633EA7E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

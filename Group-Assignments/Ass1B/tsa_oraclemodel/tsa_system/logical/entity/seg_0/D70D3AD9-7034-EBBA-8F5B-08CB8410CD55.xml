@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D70D3AD9-7034-EBBA-8F5B-08CB8410CD55" name="REVIEW">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:22:16 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="review_id" id="3F640D86-12E3-A764-F2E6-DC82D3289762">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 02:31:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[review id]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="review_date" id="FF0C864C-2041-3435-F749-CFBC2968714A">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:41:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[review date]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="member_no" id="7B668AA9-3570-E83E-9ABE-D0EE183CDB76">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 08:16:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number]]></commentInRDBMS>
+<generatorID>66E34493-8B57-A652-D209-A5620FD72A92</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>7A2C10AC-D759-0182-F53F-18C7DF970144</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resort_id" id="54E61652-026C-71FF-8CEF-10BD715EA8A4">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 08:16:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>66E34493-8B57-A652-D209-A5620FD72A92</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>87885601-A290-D965-AA1C-117F34001023</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="poi_address" id="FD10E802-90A8-A5F2-ACE9-702541039761">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-08 08:55:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest street address]]></commentInRDBMS>
+<generatorID>8C6733C6-0634-9B2B-6B18-10608811DFE9</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>A2A90196-02AC-5EED-758C-4C76C20A8D38</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="review_rating" id="563D0146-CDE6-D76D-1FF6-958E2DB84D69">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:41:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[reveiew rating, 5 grades which are '1','2','3','4','5']]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<constraintName>chk_review_rating</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="1" description="score 1"/>
+<valueDef value="2" description="score 2"/>
+<valueDef value="3" description="score 3"/>
+<valueDef value="4" description="score 4"/>
+<valueDef value="5" description="score 5"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="review_comment" id="3394E3A5-828C-B23A-2D4C-7C05D59ECBA0">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:42:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[review comment]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8D06A607-DEFD-C1C5-F5F1-2035A15409AA" name="REVIEW PK">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 13:41:44 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3F640D86-12E3-A764-F2E6-DC82D3289762</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="F3014789-1D12-843C-B747-427A185FCC90" name="REVIEW_NK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 02:33:11 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<newElementsIDs>FF0C864C-2041-3435-F749-CFBC2968714A,7B668AA9-3570-E83E-9ABE-D0EE183CDB76,54E61652-026C-71FF-8CEF-10BD715EA8A4,FD10E802-90A8-A5F2-ACE9-702541039761</newElementsIDs>
+<usedAttributes>
+<attributeRef>FF0C864C-2041-3435-F749-CFBC2968714A</attributeRef>
+<attributeRef>7B668AA9-3570-E83E-9ABE-D0EE183CDB76</attributeRef>
+<attributeRef>54E61652-026C-71FF-8CEF-10BD715EA8A4</attributeRef>
+<attributeRef>FD10E802-90A8-A5F2-ACE9-702541039761</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

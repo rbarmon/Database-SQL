@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="691A0307-D72E-34AD-F4EC-5DD95842EFD6" name="MEMBER">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>7AB4179E-012E-FA6B-6F35-570075CD28E8</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="member_no" id="41CC339E-9A60-11BC-6FDF-BF472239CDB8">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number]]></commentInRDBMS>
+<generatorID>7A2C10AC-D759-0182-F53F-18C7DF970144</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resort_id" id="A412FB69-A539-792B-E54A-D22D6ACC6812">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>87885601-A290-D965-AA1C-117F34001023</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED5F4CA2-F986-E212-9D5E-1E1F113B78B3" referredColumn="9FE8D7F9-7DA4-A3A2-45F3-D952355B4959"/>
+</associations>
+</Column>
+<Column name="member_name" id="01FE44C1-3DCD-2254-F858-74AF30CA7F9A">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member name]]></commentInRDBMS>
+<generatorID>2A278B30-EAB6-8D10-FC3E-E6629F99FD69</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_address" id="05BC23D1-5EB3-B793-2DE5-7C04AAAFCA25">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member home address]]></commentInRDBMS>
+<generatorID>B6632C42-469E-C354-07E8-A82F30FC1227</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_email" id="D5D15622-06B4-0267-D09F-3F4C59FDE2F4">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member email]]></commentInRDBMS>
+<generatorID>B5872BD0-E73E-C5FC-9E93-CC2792526CBE</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_phone_no" id="350344BE-6223-93C5-E437-EF43F7B01E74">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member phone number]]></commentInRDBMS>
+<generatorID>7223C068-9062-32F8-1082-8ABB1BF2B27C</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_joindate" id="C31B1D2E-B0CD-BC89-59BE-3D1ADB8C7CCE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member join date]]></commentInRDBMS>
+<generatorID>839E9C8F-95D3-C030-7105-EC2BA1D5D06E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_point" id="A08CF15D-2C14-C970-8D37-F683971F7012">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member point]]></commentInRDBMS>
+<generatorID>308868AE-2180-501E-B385-D546CCA20D7E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resort_id1" id="0A23D8ED-E525-1F62-6D75-D92524BE26BB">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>1CA44E5D-2BB4-21CE-83F4-4E1D0F2B5E8E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2782FA3A-7976-03F9-2158-8E2ACFFED06B" referredColumn="A412FB69-A539-792B-E54A-D22D6ACC6812"/>
+</associations>
+</Column>
+<Column name="member_recommend" id="D5D1CC64-CA93-D4BF-EAD1-BADB724AECAE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number]]></commentInRDBMS>
+<generatorID>FE5AB9F4-EB30-8AE1-D0FC-53C1DE5C4F19</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2782FA3A-7976-03F9-2158-8E2ACFFED06B" referredColumn="41CC339E-9A60-11BC-6FDF-BF472239CDB8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A33EF3EE-4A54-FFA6-A389-B390769F51F4" name="MEMBER_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>9E51A303-90A0-7330-0F60-B3D40D319D7E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41CC339E-9A60-11BC-6FDF-BF472239CDB8"/>
+<colUsage columnID="A412FB69-A539-792B-E54A-D22D6ACC6812"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="999A13DD-9A85-51B8-8558-3C8427DE8815" name="member_member">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>A5260AD5-C488-627E-2DA9-97F778C5356E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5D1CC64-CA93-D4BF-EAD1-BADB724AECAE"/>
+<colUsage columnID="0A23D8ED-E525-1F62-6D75-D92524BE26BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBB6ED64-AB20-A997-E16C-370274528505" name="resort_member">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>4BF4ECB3-5511-3EA5-75DE-5D898F622E7F</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A412FB69-A539-792B-E54A-D22D6ACC6812"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

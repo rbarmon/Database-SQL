@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C1BEA532-A4F5-EAA3-7F01-14B2F66C54D3" name="MEMBER_FEE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>E1B37D66-7F3C-D0ED-4BC2-4DD64C733339</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mf_feeyear" id="5EB47292-CA17-8F0E-DEE9-0988821C9408">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[fee year]]></commentInRDBMS>
+<generatorID>E022ECEA-671C-E85C-4DAB-6DF758A74C97</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_no" id="9F560631-65E6-1FD0-058C-41C0344C751A">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member number]]></commentInRDBMS>
+<generatorID>3A7DB4F9-7DED-8F0A-AC4A-BECBAFA9B053</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CFC2A29-034E-2691-8CC9-06766F886238" referredColumn="41CC339E-9A60-11BC-6FDF-BF472239CDB8"/>
+</associations>
+</Column>
+<Column name="resort_id" id="D90BD67B-EC48-3C5B-84A6-FC30FD78912D">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>A4B51416-3B1E-20AD-F772-057628D4B7D3</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CFC2A29-034E-2691-8CC9-06766F886238" referredColumn="A412FB69-A539-792B-E54A-D22D6ACC6812"/>
+</associations>
+</Column>
+<Column name="mf_maintfee" id="54DF76B1-11D5-1C27-2DE8-C6A58A1B7901">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member maintenance fee]]></commentInRDBMS>
+<generatorID>97B7C161-5891-69D2-AB45-C9EF18A401CB</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mf_management_annualfee" id="4ACC6E69-DBEF-A69A-F5FC-64F37484FCFB">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member annual fee]]></commentInRDBMS>
+<generatorID>0F12AE5A-6E42-E3AD-BF60-EAB0395B86D6</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mf_totalcharge" id="D26D943E-C5D9-5AC6-278B-BEB640AC68D3">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member total charge]]></commentInRDBMS>
+<generatorID>079BE751-C60D-EE6C-185E-9D9FC7BA337F</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mf_datepaid" id="981F7713-83F9-8D0C-7080-DFF71D89CBA5">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[member date paid]]></commentInRDBMS>
+<generatorID>68B5C307-76B7-850F-6FD0-593B2B48F9DD</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mf_initialpayment" id="2EC8365B-7AE2-41A1-77C5-F500FE6F9C7F">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[initial fees, check constraint which are 'Y' for yes and 'N' for no]]></commentInRDBMS>
+<generatorID>2A5D17C1-4441-A908-E070-EC2D66B69530</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<constraintName>chk_mf_initialpayment</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="no"/>
+<valueDef value="Y" description="yes"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mf_initialfee" id="A8CA9D9C-E8C2-9B70-71DE-051C352B66E3">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[cost for initial fees]]></commentInRDBMS>
+<generatorID>FB7F41FE-9730-84B3-043E-78D261FF5342</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DDFA94A-518D-6828-97A0-E14E08B015A3" name="MEMBER_FEE_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>516FD2A1-6F70-03A9-C760-C7D64331F9BB</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EB47292-CA17-8F0E-DEE9-0988821C9408"/>
+<colUsage columnID="9F560631-65E6-1FD0-058C-41C0344C751A"/>
+<colUsage columnID="D90BD67B-EC48-3C5B-84A6-FC30FD78912D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E6613BC-05BA-4E27-4147-9BE290C1F7AC" name="member_member_fee">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>41CC3673-1C2C-A70C-F9A1-D84B4BDB99FE</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F560631-65E6-1FD0-058C-41C0344C751A"/>
+<colUsage columnID="D90BD67B-EC48-3C5B-84A6-FC30FD78912D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

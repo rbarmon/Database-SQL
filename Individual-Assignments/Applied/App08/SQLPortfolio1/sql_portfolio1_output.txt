@@ -1,0 +1,383 @@
+SQL> 
+SQL> --****PLEASE ENTER YOUR DETAILS BELOW****
+SQL> --sql_portfolio1.sql
+SQL> 
+SQL> --Student ID: 31165176
+SQL> --Student Name: Rian Barrett
+SQL> --Unit Code: FIT2094
+SQL> --Applied Class No: A02
+SQL> 
+SQL> DROP TABLE inspect_item CASCADE CONSTRAINTS PURGE;
+
+Table INSPECT_ITEM dropped.
+
+SQL> DROP TABLE inspect_item PURGE;
+
+Error starting at line : 14 in command -
+DROP TABLE inspect_item PURGE
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> /*Task 1: CREATE table INSPECT_ITEM and non FK constraints*/
+SQL> -- W7
+SQL> CREATE TABLE inspect_item (
+  2      inspitem_id        NUMERIC(7) NOT NULL,
+  3      prop_no            NUMERIC(4) NOT NULL,
+  4      inspect_datetime   DATE NOT NULL,
+  5      item_code          CHAR(3) NOT NULL,
+  6      inspitem_result    CHAR(1) NOT NULL,
+  7      inspitem_statement VARCHAR(200)
+  8  );
+
+Table INSPECT_ITEM created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.inspitem_id IS
+  2      'Inspect item unique identifier (surrogate key)((unique for each inspect item record)'
+  3  ;
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.prop_no IS
+  2      'Property identifier';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.inspect_datetime IS
+  2      'Inspection date and time';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.item_code IS
+  2      'Item identifier';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.inspitem_result IS
+  2      'Result of inspection item: U: Urgent Action, S: Standard Met, N: Standard Not Met'
+  3  ;
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN inspect_item.inspitem_statement IS
+  2      'Brief statement of inspection item (not mandatory)';
+
+Comment created.
+
+SQL> -- non FK constraints
+SQL> ALTER TABLE inspect_item ADD CONSTRAINT inspect_item_pk PRIMARY KEY ( inspitem_id );
+
+Table INSPECT_ITEM altered.
+
+SQL> 
+SQL> ALTER TABLE inspect_item
+  2      ADD CONSTRAINT inspect_item_uq UNIQUE ( prop_no,
+  3                                              inspect_datetime,
+  4                                              item_code );
+
+Table INSPECT_ITEM altered.
+
+SQL> 
+SQL> -- U: Urgent Action, S: Standard Met, N: Standard Not Met'
+SQL> ALTER TABLE inspect_item
+  2      ADD CONSTRAINT ck_inspitem_result CHECK ( inspitem_result IN ( 'U', 'S', 'N' ) );
+
+Table INSPECT_ITEM altered.
+
+SQL> /*Task 1: Add FK constraints*/
+SQL> ALTER TABLE inspect_item
+  2      ADD CONSTRAINT inspection_inspect_item FOREIGN KEY ( prop_no,
+  3                                                           inspect_datetime )
+  4          REFERENCES inspection ( prop_no,
+  5                                  inspect_datetime );
+
+Table INSPECT_ITEM altered.
+
+SQL> 
+SQL> ALTER TABLE inspect_item
+  2      ADD CONSTRAINT item_inspect_item FOREIGN KEY ( item_code )
+  3          REFERENCES item ( item_code );
+
+Table INSPECT_ITEM altered.
+
+SQL> 
+SQL> 
+SQL> /*Task 2: Insert INSPECTOR, INSPECTION and INSPECT_ITEMs*/
+SQL> -- W8
+SQL> 
+SQL> DROP SEQUENCE inspitem_id_seq;
+
+Sequence INSPITEM_ID_SEQ dropped.
+
+SQL> -- Created sequence inspitem_id_seq because it is the only thing that increments by a value
+SQL> CREATE SEQUENCE inspitem_id_seq START WITH 0000001 INCREMENT BY 1;
+
+Sequence INSPITEM_ID_SEQ created.
+
+SQL> 
+SQL> --one INSPECTOR named James Knight,
+SQL> INSERT INTO inspector VALUES (
+  2      00001,
+  3      'James',
+  4      'Knight'
+  5  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> --one INSPECTION carried on by James Knight for property number 9346 on 15-Dec-2022 10:00 AM
+SQL> INSERT INTO inspection VALUES (
+  2      9346,
+  3      TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM'),
+  4      00001
+  5  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> /*
+SQL>and two INSPECT_ITEM entries:
+SQL>i. an Urgent Action (U) for a jammed lock (LCK) on the garage back entry door. A locksmith has been called to fix the lock
+SQL>ii. a Standard Met (S) for mould and damp (MLD) */
+SQL> INSERT INTO inspect_item VALUES (
+  2      inspitem_id_seq.NEXTVAL,
+  3      9346,
+  4      TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM'),
+  5      'LCK',
+  6      'U',
+  7      'A locksmith has been called to fix the lock'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> INSERT INTO inspect_item VALUES (
+  2      inspitem_id_seq.NEXTVAL,
+  3      9346,
+  4      TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM'),
+  5      'MLD',
+  6      'S',
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspector;
+
+INSPECTOR_ID INSPECTOR_GIVNAME    INSPECTOR_FAMNAME   
+------------ -------------------- --------------------
+           1 James                Knight              
+       29542 Karina               Black               
+       29123 Katherine            Black               
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspection;
+
+   PROP_NO INSPECT_ INSPECTOR_ID
+---------- -------- ------------
+      9346 22-12-15            1
+      1965 21-07-16        29542
+      1965 21-07-16        29542
+      1965 22-01-21        29123
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspect_item;
+
+INSPITEM_ID    PROP_NO INSPECT_ ITE I INSPITEM_STATEMENT                                                                                                                                                                                      
+----------- ---------- -------- --- - --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          1       9346 22-12-15 LCK U A locksmith has been called to fix the lock                                                                                                                                                             
+          2       9346 22-12-15 MLD S                                                                                                                                                                                                         
+
+SQL> 
+SQL> /*Task 3: Change of status for mould and damp to Not Met*/
+SQL> /*
+SQL>After the inspection for property number 9346 on 15-Dec-2022 10:00 AM, James 
+SQL>Knight double checked all the rooms and found a small patch of mould is present 
+SQL>in the main bathroom. Tenant has been advised to remove the mould with chemicals
+SQL>. Change the status for mould and damp in this inspection as Standard Not Met 
+SQL>(N) and add the necessary statement. */
+SQL> 
+SQL> UPDATE inspect_item
+  2  SET
+  3      inspitem_result = 'N'
+  4  WHERE
+  5          item_code = 'MLD'
+  6      AND inspect_datetime = TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM');
+
+1 row updated.
+
+SQL> /*where item_code = 'MLD';*/
+SQL> UPDATE inspect_item
+  2  SET
+  3      inspitem_statement = 'Tenant has been advised to remove the mould with chemicals.'
+  4  WHERE
+  5          item_code = 'MLD'
+  6      AND inspect_datetime = TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM');
+
+1 row updated.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspect_item;
+
+INSPITEM_ID    PROP_NO INSPECT_ ITE I INSPITEM_STATEMENT                                                                                                                                                                                      
+----------- ---------- -------- --- - --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          1       9346 22-12-15 LCK U A locksmith has been called to fix the lock                                                                                                                                                             
+          2       9346 22-12-15 MLD N Tenant has been advised to remove the mould with chemicals.                                                                                                                                             
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> /*Task 4: Removal of inspection*/
+SQL> /*The property agent determined that the inspection carried on by James Knight 
+SQL>for property number 9346 on 15-Dec-2022 10:00 AM was invalid, thus all details 
+SQL>related to this inspection must be removed from the database. Make these changes
+SQL>to the data in the database. */
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspect_item;
+
+INSPITEM_ID    PROP_NO INSPECT_ ITE I INSPITEM_STATEMENT                                                                                                                                                                                      
+----------- ---------- -------- --- - --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          1       9346 22-12-15 LCK U A locksmith has been called to fix the lock                                                                                                                                                             
+          2       9346 22-12-15 MLD N Tenant has been advised to remove the mould with chemicals.                                                                                                                                             
+
+SQL> 
+SQL> DELETE FROM inspect_item
+  2  WHERE
+  3          prop_no = 9346
+  4      AND inspect_datetime = TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM');
+
+2 rows deleted.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspect_item;
+no rows selected
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspection;
+
+   PROP_NO INSPECT_ INSPECTOR_ID
+---------- -------- ------------
+      9346 22-12-15            1
+      1965 21-07-16        29542
+      1965 21-07-16        29542
+      1965 22-01-21        29123
+
+SQL> 
+SQL> DELETE FROM inspection
+  2  WHERE
+  3          prop_no = 9346
+  4      AND inspect_datetime = TO_DATE('15-Dec-2022 10:00', 'dd-Mon-yyyy hh:mi AM');
+
+1 row deleted.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspection;
+
+   PROP_NO INSPECT_ INSPECTOR_ID
+---------- -------- ------------
+      1965 21-07-16        29542
+      1965 21-07-16        29542
+      1965 22-01-21        29123
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspector;
+
+INSPECTOR_ID INSPECTOR_GIVNAME    INSPECTOR_FAMNAME   
+------------ -------------------- --------------------
+           1 James                Knight              
+       29542 Karina               Black               
+       29123 Katherine            Black               
+
+SQL> 
+SQL> DELETE FROM inspector
+  2  WHERE
+  3      inspector_givname = 'James' and inspector_famname = 'Knight';
+
+1 row deleted.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      inspector;
+
+INSPECTOR_ID INSPECTOR_GIVNAME    INSPECTOR_FAMNAME   
+------------ -------------------- --------------------
+       29542 Karina               Black               
+       29123 Katherine            Black               
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> 
+SQL> --Comment out SET ECHO and SPOOL commands before submitting your portfolio
+SQL> SPOOL OFF

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9A0F681-0A25-9D60-006E-D6DCC239C595" name="RATE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>AE54B961-F32C-10F8-8131-4AD1CEACA0F4</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rate_season" id="5619AF94-5F96-9532-34E8-5CCDA2D61432">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[rate holiday season (peak, off, school holidays).]]></commentInRDBMS>
+<generatorID>C70352F6-8315-C535-DFD2-7703835FB772</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="unit_no" id="804C1074-6F35-99F3-4003-F49254C18502">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit number]]></commentInRDBMS>
+<generatorID>675A2274-D68C-E00D-180B-8EE1B2F789FD</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6093E35A-224B-E601-A5F4-8C2FDA674E14" referredColumn="80D7894A-BF80-CFA8-65B0-EDD7C4EE7DF1"/>
+</associations>
+</Column>
+<Column name="resort_id" id="FF9F37AB-FD8E-6E23-3429-EF5A002505D1">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>879C7130-529A-8A8B-C2EB-77E3F9A6E0BD</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6093E35A-224B-E601-A5F4-8C2FDA674E14" referredColumn="17AC80C8-DD1F-F8AA-1255-EE1D1B9AE67B"/>
+</associations>
+</Column>
+<Column name="rate_cost" id="F3CEDD9F-E875-974F-ED18-28354963E602">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[rate cost ]]></commentInRDBMS>
+<generatorID>FA58C4F1-D3CD-9292-6AFE-5572CE2620A3</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2434751-78B2-6754-80F4-6C24D924D742" name="RATE_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>B28DA837-A310-034D-8BD6-E5BA9CE6F342</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5619AF94-5F96-9532-34E8-5CCDA2D61432"/>
+<colUsage columnID="804C1074-6F35-99F3-4003-F49254C18502"/>
+<colUsage columnID="FF9F37AB-FD8E-6E23-3429-EF5A002505D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCBCB8E3-5EFB-EE87-326C-4E4F51389016" name="unit_rate">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>07C4F846-120B-8EE7-22D4-E2F1B5796310</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="804C1074-6F35-99F3-4003-F49254C18502"/>
+<colUsage columnID="FF9F37AB-FD8E-6E23-3429-EF5A002505D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

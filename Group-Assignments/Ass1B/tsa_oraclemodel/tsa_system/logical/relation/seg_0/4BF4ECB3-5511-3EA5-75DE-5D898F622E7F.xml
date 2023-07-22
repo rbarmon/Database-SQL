@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="resort_member" directorySegmentName="seg_0" id="4BF4ECB3-5511-3EA5-75DE-5D898F622E7F">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 11:52:41 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<sourcePk>1A931DC9-6692-6579-B7BC-7B2DF164C943</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>home</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>12A87238-B6DD-997D-2D00-E9C23009318E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7AB4179E-012E-FA6B-6F35-570075CD28E8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,393 @@
+SQL> 
+SQL> --****PLEASE ENTER YOUR DETAILS BELOW****
+SQL> --sql_portfolio2_basic.sql
+SQL> 
+SQL> --Student ID: 31165176
+SQL> --Student Name: Rian Barrett
+SQL> --Unit Code: FIT2094
+SQL> --Applied Class No: A02
+SQL> 
+SQL> 
+SQL> /*1*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon
+SQL> -- (;) at the end of this answer
+SQL> 
+SQL> SELECT
+  2      pay_no,
+  3      to_char(pay_date, 'DD Mon YYYY') AS date_paid,
+  4      pay_type,
+  5      paymethod_name,
+  6      tenant_givname,
+  7      tenant_famname
+  8  FROM
+  9           rent.payment
+ 10      NATURAL JOIN rent.tenant
+ 11      NATURAL JOIN rent.paymethod
+ 12  WHERE
+ 13      lower(tenant_famname) LIKE '%d%'
+ 14      AND pay_date BETWEEN '2021-01-01' AND '2021-06-30'
+ 15  ORDER BY
+ 16      pay_type,
+ 17      pay_date;
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        77 04 Jan 2021          B PAYPAL          Patricia             Stroband            
+        77 04 Jan 2021          B PAYPAL          Diane                De Bruyne           
+        77 04 Jan 2021          B PAYPAL          Robinson             Elderbrant          
+        77 04 Jan 2021          B PAYPAL          Nadia                Jerred              
+        77 04 Jan 2021          B PAYPAL          Haily                Cuardall            
+        77 04 Jan 2021          B PAYPAL          Dacey                Demchen             
+        80 11 Jan 2021          B BANK CHEQUE     Haily                Cuardall            
+        80 11 Jan 2021          B BANK CHEQUE     Nadia                Jerred              
+        80 11 Jan 2021          B BANK CHEQUE     Robinson             Elderbrant          
+        80 11 Jan 2021          B BANK CHEQUE     Diane                De Bruyne           
+        80 11 Jan 2021          B BANK CHEQUE     Patricia             Stroband            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        80 11 Jan 2021          B BANK CHEQUE     Dacey                Demchen             
+        83 17 Jan 2021          B DIRECT DEPOSIT  Patricia             Stroband            
+        83 17 Jan 2021          B DIRECT DEPOSIT  Diane                De Bruyne           
+        83 17 Jan 2021          B DIRECT DEPOSIT  Robinson             Elderbrant          
+        83 17 Jan 2021          B DIRECT DEPOSIT  Nadia                Jerred              
+        83 17 Jan 2021          B DIRECT DEPOSIT  Haily                Cuardall            
+        83 17 Jan 2021          B DIRECT DEPOSIT  Dacey                Demchen             
+        90 26 Feb 2021          B BPAY            Nadia                Jerred              
+        90 26 Feb 2021          B BPAY            Haily                Cuardall            
+        90 26 Feb 2021          B BPAY            Robinson             Elderbrant          
+        90 26 Feb 2021          B BPAY            Diane                De Bruyne           
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        90 26 Feb 2021          B BPAY            Patricia             Stroband            
+        90 26 Feb 2021          B BPAY            Dacey                Demchen             
+        97 30 Mar 2021          B CREDIT CARD     Nadia                Jerred              
+        97 30 Mar 2021          B CREDIT CARD     Haily                Cuardall            
+        97 30 Mar 2021          B CREDIT CARD     Robinson             Elderbrant          
+        97 30 Mar 2021          B CREDIT CARD     Dacey                Demchen             
+        97 30 Mar 2021          B CREDIT CARD     Patricia             Stroband            
+        97 30 Mar 2021          B CREDIT CARD     Diane                De Bruyne           
+       115 21 Jun 2021          B BANK CHEQUE     Haily                Cuardall            
+       115 21 Jun 2021          B BANK CHEQUE     Nadia                Jerred              
+       115 21 Jun 2021          B BANK CHEQUE     Patricia             Stroband            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       115 21 Jun 2021          B BANK CHEQUE     Diane                De Bruyne           
+       115 21 Jun 2021          B BANK CHEQUE     Robinson             Elderbrant          
+       115 21 Jun 2021          B BANK CHEQUE     Dacey                Demchen             
+        78 04 Jan 2021          R PAYPAL          Nadia                Jerred              
+        78 04 Jan 2021          R PAYPAL          Robinson             Elderbrant          
+        78 04 Jan 2021          R PAYPAL          Diane                De Bruyne           
+        78 04 Jan 2021          R PAYPAL          Patricia             Stroband            
+        78 04 Jan 2021          R PAYPAL          Haily                Cuardall            
+        78 04 Jan 2021          R PAYPAL          Dacey                Demchen             
+        79 07 Jan 2021          R CREDIT CARD     Haily                Cuardall            
+        79 07 Jan 2021          R CREDIT CARD     Nadia                Jerred              
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        79 07 Jan 2021          R CREDIT CARD     Robinson             Elderbrant          
+        79 07 Jan 2021          R CREDIT CARD     Patricia             Stroband            
+        79 07 Jan 2021          R CREDIT CARD     Diane                De Bruyne           
+        79 07 Jan 2021          R CREDIT CARD     Dacey                Demchen             
+        81 11 Jan 2021          R CREDIT CARD     Haily                Cuardall            
+        81 11 Jan 2021          R CREDIT CARD     Nadia                Jerred              
+        81 11 Jan 2021          R CREDIT CARD     Robinson             Elderbrant          
+        81 11 Jan 2021          R CREDIT CARD     Diane                De Bruyne           
+        81 11 Jan 2021          R CREDIT CARD     Patricia             Stroband            
+        81 11 Jan 2021          R CREDIT CARD     Dacey                Demchen             
+        84 17 Jan 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        84 17 Jan 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+        84 17 Jan 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+        84 17 Jan 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+        84 17 Jan 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+        82 17 Jan 2021          R CREDIT CARD     Dacey                Demchen             
+        82 17 Jan 2021          R CREDIT CARD     Patricia             Stroband            
+        82 17 Jan 2021          R CREDIT CARD     Diane                De Bruyne           
+        82 17 Jan 2021          R CREDIT CARD     Robinson             Elderbrant          
+        82 17 Jan 2021          R CREDIT CARD     Nadia                Jerred              
+        82 17 Jan 2021          R CREDIT CARD     Haily                Cuardall            
+        84 17 Jan 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        85 26 Jan 2021          R BPAY            Nadia                Jerred              
+        85 26 Jan 2021          R BPAY            Haily                Cuardall            
+        85 26 Jan 2021          R BPAY            Robinson             Elderbrant          
+        85 26 Jan 2021          R BPAY            Diane                De Bruyne           
+        85 26 Jan 2021          R BPAY            Patricia             Stroband            
+        85 26 Jan 2021          R BPAY            Dacey                Demchen             
+        86 04 Feb 2021          R PAYPAL          Haily                Cuardall            
+        86 04 Feb 2021          R PAYPAL          Nadia                Jerred              
+        86 04 Feb 2021          R PAYPAL          Robinson             Elderbrant          
+        86 04 Feb 2021          R PAYPAL          Diane                De Bruyne           
+        86 04 Feb 2021          R PAYPAL          Patricia             Stroband            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        86 04 Feb 2021          R PAYPAL          Dacey                Demchen             
+        87 07 Feb 2021          R CREDIT CARD     Nadia                Jerred              
+        87 07 Feb 2021          R CREDIT CARD     Haily                Cuardall            
+        87 07 Feb 2021          R CREDIT CARD     Robinson             Elderbrant          
+        87 07 Feb 2021          R CREDIT CARD     Dacey                Demchen             
+        87 07 Feb 2021          R CREDIT CARD     Patricia             Stroband            
+        87 07 Feb 2021          R CREDIT CARD     Diane                De Bruyne           
+        88 11 Feb 2021          R CREDIT CARD     Haily                Cuardall            
+        88 11 Feb 2021          R CREDIT CARD     Nadia                Jerred              
+        88 11 Feb 2021          R CREDIT CARD     Robinson             Elderbrant          
+        88 11 Feb 2021          R CREDIT CARD     Diane                De Bruyne           
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        88 11 Feb 2021          R CREDIT CARD     Patricia             Stroband            
+        88 11 Feb 2021          R CREDIT CARD     Dacey                Demchen             
+        89 17 Feb 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+        89 17 Feb 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+        89 17 Feb 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+        89 17 Feb 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+        89 17 Feb 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+        89 17 Feb 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+        91 26 Feb 2021          R BPAY            Patricia             Stroband            
+        91 26 Feb 2021          R BPAY            Dacey                Demchen             
+        91 26 Feb 2021          R BPAY            Haily                Cuardall            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        91 26 Feb 2021          R BPAY            Nadia                Jerred              
+        91 26 Feb 2021          R BPAY            Robinson             Elderbrant          
+        91 26 Feb 2021          R BPAY            Diane                De Bruyne           
+        92 04 Mar 2021          R PAYPAL          Nadia                Jerred              
+        92 04 Mar 2021          R PAYPAL          Haily                Cuardall            
+        92 04 Mar 2021          R PAYPAL          Robinson             Elderbrant          
+        92 04 Mar 2021          R PAYPAL          Diane                De Bruyne           
+        92 04 Mar 2021          R PAYPAL          Patricia             Stroband            
+        92 04 Mar 2021          R PAYPAL          Dacey                Demchen             
+        93 07 Mar 2021          R CREDIT CARD     Haily                Cuardall            
+        93 07 Mar 2021          R CREDIT CARD     Nadia                Jerred              
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        93 07 Mar 2021          R CREDIT CARD     Robinson             Elderbrant          
+        93 07 Mar 2021          R CREDIT CARD     Diane                De Bruyne           
+        93 07 Mar 2021          R CREDIT CARD     Patricia             Stroband            
+        93 07 Mar 2021          R CREDIT CARD     Dacey                Demchen             
+        94 11 Mar 2021          R CREDIT CARD     Nadia                Jerred              
+        94 11 Mar 2021          R CREDIT CARD     Haily                Cuardall            
+        94 11 Mar 2021          R CREDIT CARD     Robinson             Elderbrant          
+        94 11 Mar 2021          R CREDIT CARD     Dacey                Demchen             
+        94 11 Mar 2021          R CREDIT CARD     Patricia             Stroband            
+        94 11 Mar 2021          R CREDIT CARD     Diane                De Bruyne           
+        95 17 Mar 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        95 17 Mar 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+        95 17 Mar 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+        95 17 Mar 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+        95 17 Mar 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+        95 17 Mar 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+        96 26 Mar 2021          R BPAY            Haily                Cuardall            
+        96 26 Mar 2021          R BPAY            Nadia                Jerred              
+        96 26 Mar 2021          R BPAY            Patricia             Stroband            
+        96 26 Mar 2021          R BPAY            Diane                De Bruyne           
+        96 26 Mar 2021          R BPAY            Robinson             Elderbrant          
+        96 26 Mar 2021          R BPAY            Dacey                Demchen             
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        98 30 Mar 2021          R CREDIT CARD     Haily                Cuardall            
+        98 30 Mar 2021          R CREDIT CARD     Nadia                Jerred              
+        98 30 Mar 2021          R CREDIT CARD     Robinson             Elderbrant          
+        98 30 Mar 2021          R CREDIT CARD     Diane                De Bruyne           
+        98 30 Mar 2021          R CREDIT CARD     Patricia             Stroband            
+        98 30 Mar 2021          R CREDIT CARD     Dacey                Demchen             
+        99 04 Apr 2021          R PAYPAL          Patricia             Stroband            
+        99 04 Apr 2021          R PAYPAL          Diane                De Bruyne           
+        99 04 Apr 2021          R PAYPAL          Robinson             Elderbrant          
+        99 04 Apr 2021          R PAYPAL          Nadia                Jerred              
+        99 04 Apr 2021          R PAYPAL          Haily                Cuardall            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+        99 04 Apr 2021          R PAYPAL          Dacey                Demchen             
+       100 07 Apr 2021          R CREDIT CARD     Haily                Cuardall            
+       100 07 Apr 2021          R CREDIT CARD     Nadia                Jerred              
+       100 07 Apr 2021          R CREDIT CARD     Robinson             Elderbrant          
+       100 07 Apr 2021          R CREDIT CARD     Diane                De Bruyne           
+       100 07 Apr 2021          R CREDIT CARD     Patricia             Stroband            
+       100 07 Apr 2021          R CREDIT CARD     Dacey                Demchen             
+       101 11 Apr 2021          R CREDIT CARD     Patricia             Stroband            
+       101 11 Apr 2021          R CREDIT CARD     Diane                De Bruyne           
+       101 11 Apr 2021          R CREDIT CARD     Robinson             Elderbrant          
+       101 11 Apr 2021          R CREDIT CARD     Nadia                Jerred              
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       101 11 Apr 2021          R CREDIT CARD     Haily                Cuardall            
+       101 11 Apr 2021          R CREDIT CARD     Dacey                Demchen             
+       102 17 Apr 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+       102 17 Apr 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+       102 17 Apr 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+       102 17 Apr 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+       102 17 Apr 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+       102 17 Apr 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+       103 26 Apr 2021          R BPAY            Nadia                Jerred              
+       103 26 Apr 2021          R BPAY            Haily                Cuardall            
+       103 26 Apr 2021          R BPAY            Robinson             Elderbrant          
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       103 26 Apr 2021          R BPAY            Dacey                Demchen             
+       103 26 Apr 2021          R BPAY            Patricia             Stroband            
+       103 26 Apr 2021          R BPAY            Diane                De Bruyne           
+       104 30 Apr 2021          R CREDIT CARD     Haily                Cuardall            
+       104 30 Apr 2021          R CREDIT CARD     Nadia                Jerred              
+       104 30 Apr 2021          R CREDIT CARD     Patricia             Stroband            
+       104 30 Apr 2021          R CREDIT CARD     Diane                De Bruyne           
+       104 30 Apr 2021          R CREDIT CARD     Robinson             Elderbrant          
+       104 30 Apr 2021          R CREDIT CARD     Dacey                Demchen             
+       105 04 May 2021          R PAYPAL          Patricia             Stroband            
+       105 04 May 2021          R PAYPAL          Diane                De Bruyne           
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       105 04 May 2021          R PAYPAL          Robinson             Elderbrant          
+       105 04 May 2021          R PAYPAL          Nadia                Jerred              
+       105 04 May 2021          R PAYPAL          Haily                Cuardall            
+       105 04 May 2021          R PAYPAL          Dacey                Demchen             
+       106 07 May 2021          R CREDIT CARD     Haily                Cuardall            
+       106 07 May 2021          R CREDIT CARD     Nadia                Jerred              
+       106 07 May 2021          R CREDIT CARD     Robinson             Elderbrant          
+       106 07 May 2021          R CREDIT CARD     Diane                De Bruyne           
+       106 07 May 2021          R CREDIT CARD     Patricia             Stroband            
+       106 07 May 2021          R CREDIT CARD     Dacey                Demchen             
+       107 11 May 2021          R CREDIT CARD     Patricia             Stroband            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       107 11 May 2021          R CREDIT CARD     Diane                De Bruyne           
+       107 11 May 2021          R CREDIT CARD     Robinson             Elderbrant          
+       107 11 May 2021          R CREDIT CARD     Nadia                Jerred              
+       107 11 May 2021          R CREDIT CARD     Haily                Cuardall            
+       107 11 May 2021          R CREDIT CARD     Dacey                Demchen             
+       108 17 May 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+       108 17 May 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+       108 17 May 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+       108 17 May 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+       108 17 May 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+       108 17 May 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       109 26 May 2021          R BPAY            Nadia                Jerred              
+       109 26 May 2021          R BPAY            Haily                Cuardall            
+       109 26 May 2021          R BPAY            Robinson             Elderbrant          
+       109 26 May 2021          R BPAY            Dacey                Demchen             
+       109 26 May 2021          R BPAY            Patricia             Stroband            
+       109 26 May 2021          R BPAY            Diane                De Bruyne           
+       110 30 May 2021          R CREDIT CARD     Haily                Cuardall            
+       110 30 May 2021          R CREDIT CARD     Nadia                Jerred              
+       110 30 May 2021          R CREDIT CARD     Patricia             Stroband            
+       110 30 May 2021          R CREDIT CARD     Diane                De Bruyne           
+       110 30 May 2021          R CREDIT CARD     Robinson             Elderbrant          
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       110 30 May 2021          R CREDIT CARD     Dacey                Demchen             
+       111 04 Jun 2021          R PAYPAL          Haily                Cuardall            
+       111 04 Jun 2021          R PAYPAL          Nadia                Jerred              
+       111 04 Jun 2021          R PAYPAL          Robinson             Elderbrant          
+       111 04 Jun 2021          R PAYPAL          Diane                De Bruyne           
+       111 04 Jun 2021          R PAYPAL          Patricia             Stroband            
+       111 04 Jun 2021          R PAYPAL          Dacey                Demchen             
+       112 07 Jun 2021          R CREDIT CARD     Nadia                Jerred              
+       112 07 Jun 2021          R CREDIT CARD     Haily                Cuardall            
+       112 07 Jun 2021          R CREDIT CARD     Robinson             Elderbrant          
+       112 07 Jun 2021          R CREDIT CARD     Dacey                Demchen             
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       112 07 Jun 2021          R CREDIT CARD     Patricia             Stroband            
+       112 07 Jun 2021          R CREDIT CARD     Diane                De Bruyne           
+       113 11 Jun 2021          R CREDIT CARD     Haily                Cuardall            
+       113 11 Jun 2021          R CREDIT CARD     Nadia                Jerred              
+       113 11 Jun 2021          R CREDIT CARD     Patricia             Stroband            
+       113 11 Jun 2021          R CREDIT CARD     Diane                De Bruyne           
+       113 11 Jun 2021          R CREDIT CARD     Robinson             Elderbrant          
+       113 11 Jun 2021          R CREDIT CARD     Dacey                Demchen             
+       114 17 Jun 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+       114 17 Jun 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+       114 17 Jun 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       114 17 Jun 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+       114 17 Jun 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+       114 17 Jun 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+       116 21 Jun 2021          R DIRECT DEPOSIT  Nadia                Jerred              
+       116 21 Jun 2021          R DIRECT DEPOSIT  Haily                Cuardall            
+       116 21 Jun 2021          R DIRECT DEPOSIT  Robinson             Elderbrant          
+       116 21 Jun 2021          R DIRECT DEPOSIT  Diane                De Bruyne           
+       116 21 Jun 2021          R DIRECT DEPOSIT  Patricia             Stroband            
+       116 21 Jun 2021          R DIRECT DEPOSIT  Dacey                Demchen             
+       117 26 Jun 2021          R BPAY            Nadia                Jerred              
+       117 26 Jun 2021          R BPAY            Haily                Cuardall            
+
+    PAY_NO DATE_PAID            P PAYMETHOD_NAME  TENANT_GIVNAME       TENANT_FAMNAME      
+---------- -------------------- - --------------- -------------------- --------------------
+       117 26 Jun 2021          R BPAY            Robinson             Elderbrant          
+       117 26 Jun 2021          R BPAY            Dacey                Demchen             
+       117 26 Jun 2021          R BPAY            Patricia             Stroband            
+       117 26 Jun 2021          R BPAY            Diane                De Bruyne           
+       118 30 Jun 2021          R CREDIT CARD     Haily                Cuardall            
+       118 30 Jun 2021          R CREDIT CARD     Nadia                Jerred              
+       118 30 Jun 2021          R CREDIT CARD     Robinson             Elderbrant          
+       118 30 Jun 2021          R CREDIT CARD     Diane                De Bruyne           
+       118 30 Jun 2021          R CREDIT CARD     Patricia             Stroband            
+       118 30 Jun 2021          R CREDIT CARD     Dacey                Demchen             
+
+252 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /*2*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon
+SQL> -- (;) at the end of this answer
+SQL> 
+SQL> SELECT
+  2      maint_id,
+  3      to_char(maint_datetime, 'dd/mm/yyyy hh:mi'),
+  4      '$' || maint_cost AS maint_cost,
+  5      p.prop_no,
+  6      prop_address,
+  7      o.owner_no,
+  8      owner_givname
+  9      || ' '
+ 10      || owner_famname  AS owner_fullname
+ 11  FROM
+ 12           rent.maintenance m
+ 13      JOIN rent.property p
+ 14      ON m.prop_no = p.prop_no
+ 15      JOIN rent.owner    o
+ 16      ON o.owner_no = p.owner_no
+ 17  WHERE
+ 18      to_char(maint_datetime, 'yyyy') = '2020'
+ 19  ORDER BY
+ 20      maint_cost ASC,
+ 21      prop_no;
+
+  MAINT_ID TO_CHAR(MAINT_DA MAINT_COST                                   PROP_NO PROP_ADDRESS                                                                       OWNER_NO OWNER_FULLNAME                           
+---------- ---------------- ----------------------------------------- ---------- -------------------------------------------------------------------------------- ---------- -----------------------------------------
+         3 01/05/2020 10:00 $3500                                           1965 4633 Leannon Crescent, Suite 962, 1791, Lake Evaside, Tasmania                         9321 Lilian Potter                            
+         2 04/01/2020 12:00 $600                                            5990 9454 Ebert Crest, Suite 183, 4027, Trompview, New South Wales                          9762 Jasun Clitsome                           
+
+SQL> 
+SQL> --Comment out SET ECHO and SPOOL commands before submitting your portfolio
+SQL> SPOOL OFF

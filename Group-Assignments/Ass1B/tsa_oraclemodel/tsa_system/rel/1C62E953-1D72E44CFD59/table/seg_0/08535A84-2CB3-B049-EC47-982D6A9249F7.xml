@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="08535A84-2CB3-B049-EC47-982D6A9249F7" name="POINT_OF_INTEREST">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>676AC55D-F7CD-C889-2908-4774A460B7FB</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="poi_address" id="A3C6461F-B3D7-5E05-344D-A89B8B47C2DE">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest street address]]></commentInRDBMS>
+<generatorID>A2A90196-02AC-5EED-758C-4C76C20A8D38</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poi_type" id="FE67E135-4283-C834-A652-F5F958B8480A">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest type (e.g. art gallery)]]></commentInRDBMS>
+<generatorID>D0FD9EE4-CF30-CAE4-53B5-50C2BFAD3308</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poi_name" id="2625BCAC-AD0C-A679-8450-2B0E1D1BA0C7">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest name]]></commentInRDBMS>
+<generatorID>7E188B38-C253-F4BF-9EAA-2FB3CADFDDB6</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poi_hour_open" id="CE74CE5F-6C57-E388-930B-6ECD331AE5D5">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest hour open]]></commentInRDBMS>
+<generatorID>92CD46F2-4FB1-F30D-695E-FB20C7E537E7</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poi_hour_close" id="EAAE5188-AF8F-89DE-B753-15E0740DB250">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest hour close]]></commentInRDBMS>
+<generatorID>BB6280A2-7B07-6E7E-C435-74A32617A96D</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poi_description" id="A43390FD-634A-F0F6-FD1F-35E12CC5C660">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[point of interest description]]></commentInRDBMS>
+<generatorID>167020A8-DF16-4984-0DCB-E62987E0AC9B</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="town_id" id="1CC616D9-3D0A-5F31-D38E-AE7811E3305C">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[town id ]]></commentInRDBMS>
+<generatorID>D051DE77-F9A2-E71A-C8ED-CF70D7FEFF99</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5CA46E59-2A0B-BEA8-F0B4-931990965E0D" referredColumn="9F7CB25C-0B68-51DA-4478-554CAA959728"/>
+</associations>
+</Column>
+<Column name="rl_id" id="F7887FF6-3494-B723-F1A8-2F5E85D0AA8A">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[rating level id]]></commentInRDBMS>
+<generatorID>00D56ECD-7D10-C84A-5B68-CEBD17133B98</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18CA3C99-4311-F154-DD44-6EC55E041238" referredColumn="5D436A8B-AD9A-2CBA-59DB-1E8B6010A65C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA20B57F-96C9-FE99-4DE3-0571F47A4512" name="POINT_OF_INTEREST_PK">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>C1DCDC31-998E-EE92-3166-44A71D5F0E82</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3C6461F-B3D7-5E05-344D-A89B8B47C2DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26B5DC00-D7A7-BA5A-4529-BE04F7917ECD" name="poi_rating_level">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>1EC72C21-930C-9E7E-D932-CD47D0D1BF23</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7887FF6-3494-B723-F1A8-2F5E85D0AA8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A66A9787-9A52-FFED-8DF0-89E73CA48084" name="town_poi">
+<createdBy>ALIEN</createdBy>
+<createdTime>2023-01-09 03:01:15 UTC</createdTime>
+<generatorID>EF5DD947-403C-815E-23C6-FC8CE9B47643</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC616D9-3D0A-5F31-D38E-AE7811E3305C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

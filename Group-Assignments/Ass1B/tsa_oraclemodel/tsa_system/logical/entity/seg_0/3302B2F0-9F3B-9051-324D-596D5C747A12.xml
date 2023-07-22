@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3302B2F0-9F3B-9051-324D-596D5C747A12" name="UNIT">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 04:05:39 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="unit_no" id="FD00BF74-93C2-07E3-3C6F-D4E0D27D0987">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:54:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit number]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resort_id" id="A929FBC4-A6EE-0DFF-A289-E24F30050BB5">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 12:15:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[resort id]]></commentInRDBMS>
+<generatorID>7BE00E20-E44E-0328-982F-C24DAC00161E</generatorID>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<referedAttribute>14A93F18-CBF3-0AC0-BD9C-623066E80956</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_type" id="03DB079F-3161-03F4-BC7C-EC955B5756F4">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:54:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[classify type of units (A: apartment, S: self-standing, O: other ) ]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<constraintName>chk_unit_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Apartment"/>
+<valueDef value="O" description="OTHER"/>
+<valueDef value="S" description="Self Standing Unit"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_bedroom_num" id="48BDB907-B249-BEB3-256D-8BCF011D7F18">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:56:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit bedroom number]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_capacity" id="84D40032-F218-C698-76DE-4C871322BA63">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:57:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit sleeping capacity]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unit_description" id="927CBFEC-F22E-E9C9-9053-BDD383FFDD93">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:57:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[unit description]]></commentInRDBMS>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E8F7225B-E483-CD96-2FF3-CB1F17390515" name="UNIT PK">
+<createdBy>rb</createdBy>
+<createdTime>2023-01-03 09:54:31 UTC</createdTime>
+<ownerDesignName>tsa_system</ownerDesignName>
+<engineerTo>
+<item key="1C62E953-6D2D-36F8-C454-1D72E44CFD59" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FD00BF74-93C2-07E3-3C6F-D4E0D27D0987</attributeRef>
+<attributeRef>A929FBC4-A6EE-0DFF-A289-E24F30050BB5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
